@@ -28,20 +28,45 @@
 <div id="inner-wrap">
 <header class="header">
 	<div id="top" class="l-constrained">
-		<!-- <div class="l-logo">
+
+		<div class="sub-header">
+			<ul class="main">
+				<li class="main__item"><a class="main__link" href="#">English</a></li>
+				<li class="main__item"><a class="main__link" href="#">USD</a></li>
+			</ul>
+		</div>
+
+		<div class="l-logo hide-on-desktop"> <!-- Mobile logo -->
 			<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<img class="logo__image" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/logo@2x.png" width="197" height="48" alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>">
+				CURATION FOODS
+				<!-- <img class="logo__image" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/logo@2x.png" width="197" height="48" alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>"> -->
 			</a>
-		</div> -->
+		</div>
+
 		<a id="nav-open-btn" class="menu-toggle js-menu-toggle" href="#offcanvas"><span class="menu-toggle__line"></span><span class="visuallyhidden">Menu</span></a>
 		<div class="offcanvas-wrap l-header-content">
 			<div id="offcanvas" class="offcanvas">
 				<a id="nav-close-btn" class="menu-toggle menu-toggle--close" href="#top"><span class="menu-toggle__line"></span><span class="visuallyhidden">Close</span></a>
 				<nav class="l-header-main" role="navigation">
-					<ul class="main">
+					<ul class="main hide-on-desktop"> <!-- Mobile menu -->
 						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
 						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
 						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
+						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
+						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
+						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
+					</ul>
+
+					<ul class="main hide-on-mobile"> <!-- Desktop menu -->
+						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
+						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
+						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
+						<li class="main__item--logo">
+							<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+								CURATION FOODS
+								<!-- <img class="logo__image" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/logo@2x.png" width="197" height="48" alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>"> -->
+							</a>
+						</li>
 						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
 						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
 						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
@@ -61,6 +86,7 @@
 	</div>
 </header>
 <div class="wrap">
-	<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-	<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+	<!-- <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+	<p class="site-description"><?php bloginfo( 'description' ); ?></p> -->
+	<hr>
 </div>
