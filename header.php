@@ -47,7 +47,8 @@
 
 		<a id="nav-open-btn" class="menu-toggle js-menu-toggle" href="#offcanvas"><span class="menu-toggle__line"></span><span class="visuallyhidden">Menu</span></a>
 
-		<div class="offcanvas-wrap l-header-content">
+		<!-- <div class="offcanvas-wrap l-header-content"> -->
+		<div class="">
 			<div id="offcanvas" class="offcanvas">
 				<a id="nav-close-btn" class="menu-toggle menu-toggle--close" href="#top"><span class="menu-toggle__line"></span><span class="visuallyhidden">Close</span></a>
 				<nav class="l-header-main" role="navigation">
@@ -60,7 +61,7 @@
 						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
 					</ul> -->
 
-					<ul class="main hide-on-mobile"> <!-- Desktop menu -->
+					<ul class="main"> <!-- Desktop menu -->
 						<li class="main__item"><a class="main__link" href="/our-story">Our Story</a></li>
 						<li class="main__item"><a class="main__link" href="/philosophy">Philosophy</a></li>
 						<li class="main__item"><a class="main__link" href="/sustainability">Sustainability</a></li>

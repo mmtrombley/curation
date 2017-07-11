@@ -16,7 +16,7 @@ module.exports = function ( grunt ) {
         config: {
             src: 'assets/src',
             dist: 'assets/dist',
-            devUrl: 'curation.dev'
+            devUrl: 'curation.dev:8888'
         },
 
         // Libsass
@@ -197,7 +197,7 @@ module.exports = function ( grunt ) {
         'concat',
         'uglify',
         'newer:copy:js',
-        'newer:imagemin',
+        // 'newer:imagemin',
         'browserSync',
         'watch', // add after 'browserSync'. Not needed for Livereload
     ]);

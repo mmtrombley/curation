@@ -29,36 +29,36 @@ get_header(); ?>
 				</div><!-- .entry-header -->
 
 				<div class="callout l-padding-vx">
-					<div class="l-constrained l-padding-tm l-padding-hl text-center">
-						<h3 class="heading--script l-margin-vn text-tawny">Curation Foods cultivates a collection of innovative brands that reimagine the way fresh, healthy food is grown, prepared, and delivered.</h3>
+					<div class="l-constrained--desktop-wide l-padding-tm l-padding-hl text-center">
+						<h3 class="heading--script l-margin-vn text-tawny">Curation Foods cultivates a collection of innovative brands<br>that reimagine the way fresh, healthy food is grown, prepared, and delivered.</h3>
 						<img class="l-margin-bd" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="460" height="19" alt="divider">
 					</div>
 				</div>
 
-				<div class="l-constrained--desktop-wide">
-					<div class="l-split">
+				<div class="l-constrained--desktop-wide flex__wrap">
+					<div class="l-split l-padding-hn">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/brand-1.jpg" width="960" height="570">
 					</div>
-					<div class="l-split">
-						<div class="l-padding-vm l-padding-hl">
+					<div class="l-split l-padding-hn flex__box">
+						<div class="l-padding-vx l-padding-hl flex__box--center">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/eat-smart-logo.jpg">
 							<h4 class="subheading text-accent">Innovation for Smarter Eating</h4>
-							<p>Eat Smart is all about using innovative technology to provide healthy, convenient fresh vegetable for everyday meals.</p>
+							<p class="text-accent">Eat Smart is all about using innovative technology to provide healthy, convenient fresh vegetable for everyday meals.</p>
 							<p><a href="https://eatsmart.net/" title="Eat Smart" target="_blank" class="btn btn--outline">Learn more</a></p>
 						</div>
 					</div>
 				</div>
 
-				<div class="l-constrained--desktop-wide">
-					<div class="l-split">
-						<div class="l-padding-vm l-padding-hl">
+				<div class="l-constrained--desktop-wide flex__wrap">
+					<div class="l-split l-padding-hn flex__box">
+						<div class="l-padding-vx l-padding-hl flex__box--center">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/o-olive-oil-logo.jpg">
 							<h4 class="subheading text-accent">Crushed to Perfection</h4>
-							<p>O Olive Oil & Vinegar is the premier producer of California specialty olive oils and wine vinegars.</p>
+							<p class="text-accent">O Olive Oil & Vinegar is the premier producer of California specialty olive oils and wine vinegars.</p>
 							<p><a href="http://www.ooliveoil.com/" title="O Olive Oil" target="_blank" class="btn btn--outline">Learn more</a></p>
 						</div>
 					</div>
-					<div class="l-split">
+					<div class="l-split l-padding-hn">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/brand-2.jpg" width="960" height="570">
 					</div>
 				</div>

@@ -5,14 +5,14 @@
 
 #outer-wrap {
     #inner-wrap {
-        width: $desktop-wide; // desktop only
+        // width: $desktop-wide; // desktop only
     }
 }
 
 /* Header
    ========================================================================== */
 .header {
-    width: $desktop-wide; // desktop only
+    // width: $desktop-wide; // desktop only
 }
 .header--sub {
     @include rem( 'padding', 8px 0 );
@@ -224,9 +224,9 @@
 
 #shop-brands {
     .img__pull-left {
-        top: 0;
+        top: auto;
         transform: none;
-        bottom: -4em;
+        bottom: -3em;
         left: 3em;
     }
 
@@ -522,7 +522,7 @@
 /* Footer
    ========================================================================== */
 .site-footer {
-    width: $desktop-wide; // desktop only
+    // width: $desktop-wide; // desktop only
 
     color: white;
     @include rem( 'padding', 25px 0 );

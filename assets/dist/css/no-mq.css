@@ -1982,8 +1982,16 @@ dd {
     content: "\e608";
 }
 
+#outer-wrap #inner-wrap {
+    width: 1900px;
+}
+
 /* Header
    ========================================================================== */
+.header {
+    width: 1900px;
+}
+
 .header--sub {
     padding: 8px 0;
     padding: .5rem 0;
@@ -1998,6 +2006,8 @@ dd {
 
 .header--sub .quick__item {
     display: inline-block;
+    padding: 0 8px;
+    padding: 0 .5rem;
 }
 
 .header--sub .quick__link {
@@ -2035,11 +2045,17 @@ dd {
 .hero {
     padding: 183px 0;
     padding: 11.4375rem 0;
+    background-position: center;
+    background-size: cover;
 }
 
 .hero.hero--card {
     padding: 90px 0 0;
     padding: 5.625rem 0 0;
+}
+
+.page-template-tpl-story .hero {
+    padding-top: 0;
 }
 
 .hero--home {
@@ -2091,6 +2107,121 @@ dd {
     left: auto;
 }
 
+.hero__nav {
+    margin-bottom: 90px;
+    margin-bottom: 5.625rem;
+    padding: 23px 0;
+    padding: 1.4375rem 0;
+    background-color: rgba(136, 136, 136, .5);
+}
+
+.hero__nav .main {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hero__nav .main__item {
+    display: inline-block;
+    float: left;
+    width: 33.3333333333%;
+}
+
+.hero__nav .main__link {
+    font-family: "montserratbold";
+    font-size: 14px;
+    font-size: .875rem;
+    display: block;
+    letter-spacing: 2px;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.hero__nav .main__link img {
+    display: block;
+    visibility: hidden;
+    max-width: 100%;
+    transition: all .15s ease;
+    opacity: 0;
+}
+
+.hero__nav .main__link:hover img {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Out of frame imagery
+   ========================================================================== */
+.img__pull-center {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.img__pull-left {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.img__pull-right {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+/* Home
+   ========================================================================== */
+#home-3,
+#public-benefit-corp,
+#sus-bottom,
+#shop-brands {
+    position: relative;
+}
+
+#home-3 .img__pull-center,
+#public-benefit-corp .img__pull-center,
+#sus-bottom .img__pull-center,
+#shop-brands .img__pull-center {
+    top: 50px;
+}
+
+#story-intro .img__pull-left {
+    top: 10%;
+    transform: translateX(-50%);
+}
+
+#story-intro .img__pull-right {
+    top: 5%;
+    transform: translateX(50%);
+}
+
+#sus-bottom .img__pull-left {
+    top: 10%;
+    transform: translateX(-50%);
+}
+
+#shop-brands .img__pull-left {
+    top: 0;
+    bottom: -4em;
+    left: 3em;
+    transform: none;
+}
+
+#shop-brands .img__pull-right {
+    top: auto;
+    right: 3em;
+    bottom: 0;
+    transform: none;
+}
+
 /* Entry
    ========================================================================== */
 .entry-title {
@@ -2136,13 +2267,27 @@ dd {
 
 /* "Flip" effect cards
    ========================================================================== */
+.flip__container {
+    perspective: 1000px;
+}
+
 .flip__card {
-    position: relative;
-    height: 375px;
-    height: 23.4375rem;
+    /* flip the pane when hovered */
+    transition: .6s;
     text-align: center;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+
+    transform-style: preserve-3d;
+}
+
+.flip__card:hover {
+    transform: rotateY(180deg);
+}
+
+.flip__card:hover .flip__front {
+    transform: none;
 }
 
 .flip__heading {
@@ -2186,6 +2331,41 @@ dd {
             transform: rotate(90deg);
 }
 
+.flip__front {
+    z-index: 2;
+    width: 475px;
+    height: 375px;
+    height: 23.4375rem;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+
+    backface-visibility: hidden;
+}
+
+.flip__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 475px;
+    height: 100%;
+    height: 375px;
+    height: 23.4375rem;
+    padding: 16px;
+    padding: 1rem;
+    transform: rotateY(180deg);
+    background-color: rgba(51, 51, 50, .75);
+
+    backface-visibility: hidden;
+}
+
+.flip__back p:last-child {
+    margin-bottom: 0;
+}
+
+.flip__back .flip__icon:after {
+    display: none;
+}
+
 /* Timeline
    ========================================================================== */
 .timeline {
@@ -2207,13 +2387,14 @@ dd {
 .timeline__content {
     float: left;
     width: 50%;
-    padding: 20px;
-    padding: 1.25rem;
+    padding: 40px 60px;
+    padding: 2.5rem 3.75rem;
     text-align: center;
 }
 
 .timeline__content:nth-child(odd) {
     float: left;
+    clear: left;
 }
 
 .timeline__content:nth-child(odd) .timeline__date {
@@ -2333,6 +2514,7 @@ dd {
 /* Footer
    ========================================================================== */
 .site-footer {
+    width: 1900px;
     padding: 25px 0;
     padding: 1.5625rem 0;
     color: white;
@@ -2546,14 +2728,20 @@ input[type="submit"]:hover {
 }
 
 .btn--outline {
+    font-family: "charterbold", serif;
+    font-style: italic;
+    letter-spacing: 2px;
+    letter-spacing: .125rem;
+    text-transform: lowercase;
     color: #333332;
-    border: 3px solid #333332;
+    border: 1px solid #333332;
     background-color: transparent;
 }
 
 .btn--outline:hover {
-    color: white;
-    background-color: #333332;
+    color: #7c2855;
+    border-color: #7c2855;
+    background-color: transparent;
 }
 
 /* Sizes
@@ -2869,7 +3057,6 @@ textarea {
 
 #outer-wrap {
     position: relative;
-    overflow: hidden;
     width: 100%;
 }
 

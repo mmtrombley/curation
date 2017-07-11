@@ -13,9 +13,11 @@
 
 	<!-- Hero -->
 	<div class="hero hero--home text-center" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/home-hero.jpg);">
-		<img class="" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/logo--white.png" width="381" height="134" alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>">
-		<h2 class="hero__title">We believe that access to real food<br>is a basic human right.</h2>
-		<a class="btn btn--primary btn--oval">Read More</a>
+		<div class="l-constrained">
+			<img class="" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/logo--white.png" width="381" height="134" alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>">
+			<h2 class="hero__title">We believe that access to real food<br>is a basic human right.</h2>
+			<a class="btn btn--primary btn--oval" href="/our-story">Read More</a>
+		</div>
 	</div><!-- .entry-header -->
 
 	<div id="home-2" class="callout callout--home">
@@ -47,12 +49,12 @@
 				
 				<h4 class="subheading">Growing Connections</h4>
 				<p class="l-padding-hx">We know our growers. This direct relationship to the people and places that cultivate our food enables us to monitor and ensure the quality of our products from field to fork.</p>
-				<p><a href="#" class="btn btn--outline">Our Sustainability</a></p>
+				<p><a href="/sustainability" class="btn btn--outline">Our Sustainability</a></p>
 			</div>
 			<div class="l-split l-padding-tx l-padding-bm">
 				<h4 class="subheading">Selective by Nature</h4>
 				<p class="l-padding-hx">Every brand in the Curation Foods portfolio meets or exceeds our strict standards of excellence and integrity for clean food ingredients. Selectivity is our namesake, after all.</p>
-				<p><a href="#" class="btn btn--outline">Our Brands</a></p>
+				<p><a href="/brand-portfolio" class="btn btn--outline">Our Brands</a></p>
 				
 			</div>
 		</div>
