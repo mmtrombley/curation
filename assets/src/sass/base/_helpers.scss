@@ -74,6 +74,28 @@
 
 
 
+/* Backgrounds
+   ========================================================================== */
+
+.bg-tawny {
+    background-color: $tawny;
+}
+.bg-mariner {
+    background-color: $mariner;
+}
+.bg-sienna {
+    background-color: $sienna;
+}
+.bg-citrine {
+    background-color: $citrine;
+}
+.bg-gray {
+    background-color: $gray;
+}
+.bg-alto {
+    background-color: $alto;
+}
+
 
 
 /* Borders
@@ -86,9 +108,11 @@
 }
 
 .border--bottom {
-    border-top: none;
-    border-right: none;
-    border-left: none;
+    border-bottom: 1px solid $alto;
+}
+
+.border--right {
+    border-right: 1px solid $alto;
 }
 
 
@@ -138,8 +162,33 @@
     text-transform: uppercase;
 }
 
+.text-serif {
+    font-family: $font-family-secondary;
+}
 
+.text-script {
+    font-family: $font-script;
+}
 
+.text-light { 
+    font-family: $font-light;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-gray {
+    color: $gray;
+}
+
+.text-tawny {
+    color: $tawny;
+}
+
+.text-tundora {
+    color: $tundora;
+}
 
 
 /* Alignment

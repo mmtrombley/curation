@@ -19,19 +19,44 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+				<?php // get_template_part( 'template-parts/content', 'page' ); ?>
 
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
+				<!-- Hero --> 
+				<div class="hero text-center" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/shop-hero.jpg);">
+
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+				</div><!-- .entry-header -->
+
+				<div class="callout l-padding-vx">
+					<div class="l-constrained l-padding-tm l-padding-hl text-center">
+						<h3 class="heading--script l-margin-vn text-tawny">With all this talk about healthy, delicious food, how could we not make it easy to indulge?</h3>
+						<img class="l-margin-bd" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="460" height="19" alt="divider">
+					</div>
+				</div>
+
+				<div id="shop-brands" class="l-constrained--desktop-wide">
+					<div class="l-three">
+						&nbsp;
+						<img class="img__pull-left" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/shop-eat-smart.jpg">
+					</div>
+					<div class="l-three border--right text-center l-padding-al">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/eat-smart-logo.jpg" height="99" width="135">
+						<p class="l-margin-tm"><a href="https://eatsmart.net/" title="Eat Smart" target="_blank" class="btn btn--outline">Learn more</a></p>
+					</div>
+					<div class="l-three text-center l-padding-al">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/o-olive-oil-logo.jpg">
+						<p class="l-margin-tm"><a href="http://www.ooliveoil.com/" title="O Olive Oil" target="_blank" class="btn btn--outline">Learn more</a></p>
+					</div>
+					<div class="l-three">
+					&nbsp;
+						<img class="img__pull-right" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/shop-ooo.jpg">
+					</div>
+				</div>
 
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

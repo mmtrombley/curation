@@ -27,49 +27,52 @@
 <div id="outer-wrap">
 <div id="inner-wrap">
 <header class="header">
-	<div id="top" class="l-constrained">
 
-		<div class="sub-header">
-			<ul class="main">
-				<li class="main__item"><a class="main__link" href="#">English</a></li>
-				<li class="main__item"><a class="main__link" href="#">USD</a></li>
+	<div class="header--sub bg-tawny">
+		<div class="l-constrained">
+			<ul class="quick">
+				<li class="quick__item"><a class="quick__link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/nav-eng.jpg" width="14" height="13" alt=""> English</a></li>
+				<li class="quick__item"><a class="quick__link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/nav-usd.jpg" width="14" height="13" alt=""> USD</a></li>
 			</ul>
 		</div>
+	</div>
+
+	<div id="top" class="l-constrained">
 
 		<div class="l-logo hide-on-desktop"> <!-- Mobile logo -->
 			<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-				CURATION FOODS
-				<!-- <img class="logo__image" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/logo@2x.png" width="197" height="48" alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>"> -->
+				<img class="logo__image" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/logo.png" width="184" height="65" alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>">
 			</a>
 		</div>
 
 		<a id="nav-open-btn" class="menu-toggle js-menu-toggle" href="#offcanvas"><span class="menu-toggle__line"></span><span class="visuallyhidden">Menu</span></a>
+
 		<div class="offcanvas-wrap l-header-content">
 			<div id="offcanvas" class="offcanvas">
 				<a id="nav-close-btn" class="menu-toggle menu-toggle--close" href="#top"><span class="menu-toggle__line"></span><span class="visuallyhidden">Close</span></a>
 				<nav class="l-header-main" role="navigation">
-					<ul class="main hide-on-desktop"> <!-- Mobile menu -->
+					<!-- <ul class="main hide-on-desktop"> 
 						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
 						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
 						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
 						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
 						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
 						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
-					</ul>
+					</ul> -->
 
 					<ul class="main hide-on-mobile"> <!-- Desktop menu -->
-						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
-						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
-						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
+						<li class="main__item"><a class="main__link" href="/our-story">Our Story</a></li>
+						<li class="main__item"><a class="main__link" href="/philosophy">Philosophy</a></li>
+						<li class="main__item"><a class="main__link" href="/sustainability">Sustainability</a></li>
 						<li class="main__item--logo">
 							<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-								CURATION FOODS
-								<!-- <img class="logo__image" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/logo@2x.png" width="197" height="48" alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>"> -->
+								<img class="logo__image" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/logo.png" width="184" height="65" alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>">
 							</a>
 						</li>
-						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
-						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
-						<li class="main__item"><a class="main__link" href="#">Link Item</a></li>
+						<li class="main__item"><a class="main__link" href="/giving-back">Giving Back</a></li>
+						<li class="main__item"><a class="main__link" href="/brand-portfolio">Brand Portfolio</a></li>
+						<li class="main__item"><a class="main__link" href="/shop">Shop</a></li>
+						<li class="main__item"><a class="main__link" href="#"><i class="icon-search"></i></a></li>
 					</ul>
 				</nav>
 
@@ -86,7 +89,4 @@
 	</div>
 </header>
 <div class="wrap">
-	<!-- <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-	<p class="site-description"><?php bloginfo( 'description' ); ?></p> -->
-	<hr>
 </div>

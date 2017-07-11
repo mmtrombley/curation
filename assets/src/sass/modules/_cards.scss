@@ -1,0 +1,116 @@
+
+// ==========================================================================
+// Widgets
+// ==========================================================================
+
+/* Widget
+   ========================================================================== */
+
+.card {
+	position: relative;
+	background-color: $citrine;
+    @include rem( 'padding', 16px );
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    //border
+    &:after {
+    	content:'';
+    	position: absolute;
+    	width: 92%;
+    	height: 92%;
+    	top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+    	border: 1px solid $tawny;
+    	background-color: transparent;
+    }
+
+    p {
+    	@include rem( 'font-size', 20px );
+    }
+
+    .card__subheading {
+    	// font-family: $font-script;
+    	@include rem( 'font-size', 30px );	
+    }
+}
+
+.card__heading {
+	color: $tawny;
+	@include rem( 'font-size', 45px );
+	@include rem( 'margin-top', 16px );
+}
+
+
+.card--home {
+	@include rem( 'padding', 0 16px );
+
+	&:before {
+		content: '';
+		width: 100%;
+		height: 65px;
+		position: absolute;
+		border: none;
+		background-color: $citrine;
+		bottom: 100%;
+		top: auto;
+		left: 0;
+	}
+
+	&:after {
+		width: 100%;
+		height: 65px;
+		border: none;
+		background-color: $citrine;
+		transform: none;
+		top: 100%;
+	    left: 0;
+	}
+
+	.card__heading {
+		font-family: $font-script;
+		@include rem( 'font-size', 60px );	
+	}
+
+	.card__content {
+		border-right: 1px solid $tawny;
+		border-left: 1px solid $tawny;
+	}
+
+	.card__pre {
+		border: 1px solid $tawny;
+		border-bottom: none;
+		position: absolute;
+		width: 548px;
+	    height: 50px;
+	    bottom: 100%;
+	    left: 50%;
+	    transform: translateX(-50%);
+	}
+
+	.card__post {
+		border: 1px solid $tawny;
+		border-top: none;
+		position: absolute;
+		width: 548px;
+	    height: 50px;
+	    top: 100%;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    z-index: 1;
+	}
+}
+
+
+.card--hero {
+	position: relative;
+	top: 50px;
+	box-shadow: 0 0 33px rgba(0, 0, 0, 0.2);
+	
+	p {
+		padding: 0 56px;
+	}
+}

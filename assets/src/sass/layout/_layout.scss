@@ -137,6 +137,18 @@
     }
 }
 
+.l-third {
+    @include span( 4 no-gutters );
+}
+
+.l-three {
+    @include span( 3 no-gutters );
+}
+
+.l-six {
+    @include span( 6 no-gutters );
+}
+
 .l-split {
     @include mq( $until: tablet ) {
         & + & {

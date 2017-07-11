@@ -8,10 +8,9 @@
  * http://type-scale.com/?size=16&scale=1.250&text=A%20Visual%20Type%20Scale&webfont=Libre+Baskerville&font-family=%27Libre%20Baskerville%27,%20serif&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=%23333
  */
 h1, h2, h3, h4, h5, h6 {
+    color: $font-color;
     font-weight: normal;
     font-family: $font-family-secondary;
-    text-transform: uppercase;
-    color: $font-color;
 }
 
 h1, h2, h3, h4 {
@@ -120,15 +119,30 @@ dd {
     text-transform: none;
 }
 
+.heading--script {
+    font-family: $font-script;
+    @include rem( 'font-size', 72px );
+}
 
-
+.heading--section {
+    margin: 0;
+    color: $tundora;
+    text-align: center;
+    background-color: $alto;
+    font-family: $font-bold;
+    text-transform: uppercase;
+    @include rem( 'height', 92px );
+    @include rem( 'line-height', 92px );
+    @include rem( 'letter-spacing', 3px );
+}
 
 
 /* Subheading
    ========================================================================== */
 
 .subheading {
-    color: lighten( $font-color, 30% );
+    font-family: $font-bold;
+    text-transform: uppercase;
 }
 
 
@@ -143,5 +157,5 @@ dd {
 }
 
 .text-accent {
-    @include rem( 'font-size', 22px );
+    @include rem( 'font-size', 24px );
 }

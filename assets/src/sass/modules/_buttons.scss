@@ -38,11 +38,11 @@ input[type="submit"] {
 }
 
 .btn--primary {
-    background-color: $pomegranate;
+    background-color: $tawny;
     color: white;
 
     &:hover {
-        background-color: darken( $pomegranate, 10% );
+        background-color: darken( $tawny, 10% );
     }
 }
 
@@ -67,13 +67,18 @@ input[type="submit"] {
 }
 
 .btn--outline {
-    background-color: transparent;
-    border: 3px solid $font-color;
     color: $font-color;
+    font-style: italic;
+    text-transform: lowercase;
+    background-color: transparent;
+    border: 1px solid $font-color;
+    font-family: $font-family-secondary;
+    @include rem( 'letter-spacing', 2px );
 
     &:hover {
-        background-color: $font-color;
-        color: white;
+        color: $tawny;
+        border-color: $tawny;
+        background-color: transparent;
     }
 }
 

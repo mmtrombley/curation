@@ -45,7 +45,10 @@
 // ==========================================================================
 
 @import "fonts/icomoon",
-        "fonts/icomoon-socials";
+        "fonts/icomoon-socials",
+        "fonts/montserrat",
+        "fonts/cheddar",
+        "fonts/charter";
 
 // ==========================================================================
 // Modules
@@ -53,6 +56,7 @@
 
 @import "modules/modules",
         "modules/comments",
+        "modules/cards",
         "modules/buttons",
         "modules/forms",
         "modules/mq-check",
