@@ -113,6 +113,38 @@
 
 .border--right {
     border-right: 1px solid $alto;
+
+    &.border-accent {
+        position: relative;
+        border: none;
+
+        &:before {
+            content:'';
+            display: block;
+            width: 1px;
+            height: 100%;
+            z-index: -1;
+            background-color: $tawny;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+
+        &:after {
+            content:'';
+            display: block;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 1px solid $tawny;
+            background-color: transparent;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            transform: translateX(50%);
+        }
+    }
 }
 
 

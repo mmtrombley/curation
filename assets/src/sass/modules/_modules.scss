@@ -5,7 +5,7 @@
 
 #outer-wrap {
     #inner-wrap {
-        // width: $desktop-wide; // desktop only
+        min-width: $desktop-wide; // desktop only
     }
 }
 
@@ -13,6 +13,13 @@
    ========================================================================== */
 .header {
     // width: $desktop-wide; // desktop only
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 .header--sub {
     @include rem( 'padding', 8px 0 );
@@ -53,10 +60,34 @@
     }
 
     .main__link {
+        display: block;
         color: $charcoal;
         font-family: $font-bold;
         text-transform: uppercase;
+
+        img {
+            max-width: 160px;
+            display: block;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.15s ease;
+        }
+
+        &:hover {
+            color: $tawny;
+
+            img {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
+}
+
+
+
+#primary {
+    margin-top: 154px;
 }
 
 
@@ -79,7 +110,7 @@
 }
 
 .hero--home {
-    background-position: center;
+    background-position: center 20%;
     background-repeat: no-repeat;
     @include rem( 'padding', 200px 0 );
 
@@ -178,7 +209,7 @@
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0%, -50%);
     z-index: -1;
 }
 
@@ -186,7 +217,7 @@
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translate(50%, -50%);
+    transform: translate(0%, -50%);
     z-index: -1;
 }
 
@@ -212,6 +243,12 @@
     .img__pull-right {
         top: 5%;
         transform: translateX(50%);
+    }
+}
+
+#public-benefit-corp {
+    .img__pull-left {
+        top: 65%;
     }
 }
 
@@ -439,6 +476,8 @@
     &:nth-child(even) {
         // clear: right;
         float: right;
+        position: relative;
+        @include rem( 'top', 70px );
 
         .timeline__date {
             position: relative;
@@ -522,7 +561,7 @@
 /* Footer
    ========================================================================== */
 .site-footer {
-    // width: $desktop-wide; // desktop only
+    min-width: $desktop-wide; // desktop only
 
     color: white;
     @include rem( 'padding', 25px 0 );
