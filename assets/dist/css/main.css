@@ -636,6 +636,10 @@ textarea {
     background-color: #d1d3d4;
 }
 
+.bg-white {
+    background-color: white;
+}
+
 /* Borders
    ========================================================================== */
 .border {
@@ -2804,6 +2808,7 @@ dd {
 }
 
 #outer-wrap #inner-wrap {
+    overflow: hidden;
     min-width: 1800px;
 }
 
@@ -2905,6 +2910,10 @@ dd {
 
 .page-template-tpl-story .hero {
     padding-top: 0;
+}
+
+.page-template-tpl-product-ooo .hero {
+    padding: 0;
 }
 
 .hero--home {
@@ -3012,18 +3021,17 @@ dd {
 
 .img__pull-left {
     position: absolute;
-    z-index: -1;
     top: 50%;
-    left: 0;
-    transform: translate(0%, -50%);
+    right: 100%;
+    transform: translate(50%, -50%);
 }
 
 .img__pull-right {
     position: absolute;
     z-index: -1;
     top: 50%;
-    right: 0;
-    transform: translate(0%, -50%);
+    left: 100%;
+    transform: translate(-50%, -50%);
 }
 
 /* Home
@@ -3053,12 +3061,12 @@ dd {
 }
 
 #public-benefit-corp .img__pull-left {
-    top: 65%;
+    top: 75%;
 }
 
 #sus-bottom .img__pull-left {
-    top: 10%;
-    transform: translateX(-50%);
+    top: 0;
+    transform: translateX(0%);
 }
 
 #shop-brands .img__pull-left {
@@ -3072,7 +3080,46 @@ dd {
     top: auto;
     right: 3em;
     bottom: 0;
+    left: auto;
     transform: none;
+}
+
+#oil-bottom .img__pull-left {
+    top: 0;
+    transform: translateX(50%);
+}
+
+#oil-bottom .img__pull-right {
+    top: 0;
+    transform: translateX(-50%);
+}
+
+#oil-links a {
+    text-decoration: underline;
+    color: #333332;
+}
+
+#oil-links a:hover {
+    color: #7c2855;
+}
+
+#oil-links a.social__content {
+    margin-right: 3px;
+    text-decoration: none;
+}
+
+#oil-links a.social__content:hover i {
+    background-color: #7c2855;
+}
+
+#oil-links a.social__content i {
+    line-height: 32px;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    color: #d1d3d4;
+    border-radius: 50%;
+    background-color: #333332;
 }
 
 /* Entry
@@ -3120,19 +3167,28 @@ dd {
 
 /* "Flip" effect cards
    ========================================================================== */
-.flip__container {
+.flip__container .l-three {
+    position: relative;
+    height: 375px;
+    height: 23.4375rem;
+
     perspective: 1000px;
 }
 
 .flip__card {
-    /* flip the pane when hovered */
-    transition: .6s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
     text-align: center;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
     transform-style: preserve-3d;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    /* flip the pane when hovered */
 }
 
 .flip__card:hover {
@@ -3185,10 +3241,12 @@ dd {
 }
 
 .flip__front {
+    position: absolute;
     z-index: 2;
-    width: 475px;
-    height: 375px;
-    height: 23.4375rem;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
     /* for firefox 31 */
     transform: rotateY(0deg);
 
@@ -3197,18 +3255,47 @@ dd {
 
 .flip__back {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 475px;
+    display: flex;
+    width: 100%;
     height: 100%;
-    height: 375px;
-    height: 23.4375rem;
-    padding: 16px;
-    padding: 1rem;
+    margin: 0;
     transform: rotateY(180deg);
-    background-color: rgba(51, 51, 50, .75);
+    background-size: cover;
 
     backface-visibility: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip__back:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: rgba(51, 51, 50, .75);
+}
+
+.flip__back * {
+    position: relative;
+    z-index: 5;
+}
+
+.flip__back p {
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 26px;
+    line-height: 1.625rem;
+}
+
+.flip__back p.text-accent {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 30px;
+    line-height: 1.875rem;
 }
 
 .flip__back p:last-child {
@@ -3217,6 +3304,30 @@ dd {
 
 .flip__back .flip__icon:after {
     display: none;
+}
+
+.flip__content {
+    padding: 0 16px;
+    padding: 0 1rem;
+}
+
+.flip__content:last-child {
+    position: absolute;
+    bottom: 1em;
+    padding: 0;
+}
+
+.bgwrap__container {
+    position: relative;
+}
+
+.bgwrap__wrap {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
 }
 
 /* Timeline
