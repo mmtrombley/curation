@@ -54,8 +54,8 @@ get_header(); ?>
 						<div class="l-padding-vx l-padding-hl flex__box--center">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/o-olive-oil-logo.jpg">
 							<h4 class="subheading text-accent">Crushed to Perfection</h4>
-							<p class="text-accent">O Olive Oil & Vinegar is the premier producer of California specialty olive oils and wine vinegars.</p>
-							<p><a href="http://www.ooliveoil.com/" title="O Olive Oil" target="_blank" class="btn btn--outline">Learn more</a></p>
+							<p class="text-accent">O Olive Oil &amp; Vinegar is the premier producer of California specialty olive oils and wine vinegars.</p>
+							<p><a href="/o-olive-oil/" title="O Olive Oil" class="btn btn--outline">Learn more</a></p>
 						</div>
 					</div>
 					<div class="l-split l-padding-hn">

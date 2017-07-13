@@ -83,14 +83,16 @@ get_header(); ?>
 				</div>
 
 				<div id="sus-bottom" class="callout l-padding-vx">
-					<div class="l-constrained--site l-padding-tm l-padding-hl text-center">
-						<h3 class="heading--script l-margin-vn text-tawny">Our Work Has Just Begun</h3>
-						<p class="text-accent">We are always learning and trying to improve, because we know what we achieved yesterday is not good enough for tomorrow. So here is our promise to you:</p>
-						<p class="text-accent">To be stewards of this earth, dedicated to enriching people’s lives on every dimension—from the foods we source, harvest, and deliver, to the people with whom we work and the trust we share with you, our community of customers and neighbors whom we cherish.</p>
-					</div>
-					<div class="l-constrained--desktop-wide">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/sustainability-bg-left.jpg" class="img__pull-left" width="253" height="617">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/sustainability-bg-right.jpg" class="img__pull-right" width="598" height="687">
+					<div class="l-constrained--desktop-wide bgwrap__container bgwrap__container">
+						<div class="l-constrained--site l-padding-tm l-padding-hl text-center">
+							<h3 class="heading--script l-margin-vn text-tawny">Our Work Has Just Begun</h3>
+							<p class="text-accent">We are always learning and trying to improve, because we know what we achieved yesterday is not good enough for tomorrow. So here is our promise to you:</p>
+							<p class="text-accent">To be stewards of this earth, dedicated to enriching people’s lives on every dimension—from the foods we source, harvest, and deliver, to the people with whom we work and the trust we share with you, our community of customers and neighbors whom we cherish.</p>
+						</div>
+						<div class="l-constrained--desktop-wide bgwrap__wrap">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/sustainability-bg-left.jpg" class="img__pull-left" width="253" height="617">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/sustainability-bg-right.jpg" class="img__pull-right" width="598" height="687">
+						</div>
 					</div>
 				</div>
 

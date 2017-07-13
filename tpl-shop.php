@@ -46,7 +46,7 @@ get_header(); ?>
 					</div>
 					<div class="l-three text-center l-padding-al">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/o-olive-oil-logo.jpg">
-						<p class="l-margin-tm"><a href="http://www.ooliveoil.com/" title="O Olive Oil" target="_blank" class="btn btn--outline">Learn more</a></p>
+						<p class="l-margin-tm"><a href="/o-olive-oil/" title="O Olive Oil" class="btn btn--outline">Learn more</a></p>
 					</div>
 					<div class="l-three">
 					&nbsp;

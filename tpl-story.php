@@ -61,13 +61,13 @@ get_header(); ?>
 				</div><!-- .entry-header -->
 
 				<div id="public-benefit-corp" class="callout l-padding-vx">
-					<div class="l-constrained--desktop-wide">
+					<div class="l-constrained--desktop-wide bgwrap__container">
 						<div class="l-constrained--site l-padding-tm l-padding-hl text-center">
 							<p class="text-accent l-margin-vn text-gray text-upper">A Healthy Balance</p>
 							<h3 class="heading--script l-margin-vn text-tawny">Public Benefit Corporation</h3>
 							<p class="text-accent">Becoming a Public Benefit Corporation was a conscious decision on our part. We are committed to a healthy balance of profitability and public benefit which, in our case, means providing more clean food to more people with less impact on our environment.</p>
 						</div>
-						<div class="l-constrained--desktop-wide">
+						<div class="l-constrained--desktop-wide bgwrap__wrap">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/story-bg-left.jpg" class="img__pull-left" width="550" height="654">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/story-bg-right.jpg" class="img__pull-right" width="611" height="591">
 						</div>
@@ -85,11 +85,15 @@ get_header(); ?>
 									<span class="flip__icon"></span>
 								</div>
 
-								<div class="flip__back text-center">
-									<p class="text-white text-accent l-margin-bs">We are honest and ethical.</p>
-									<p class="text-white text-accent l-margin-bs">We are open and trustworthy.</p>
-									<p class="text-white text-accent l-margin-bs">We are transparent with the consumer on product ingredients and sources of origin.</p>
-									<span class="flip__icon"></span>
+								<div class="flip__back text-center" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/story-card-1.jpg);">
+									<div class="flip__content">
+										<p class="text-white l-margin-bs text-accent">We are honest and ethical.</p>
+										<p class="text-white l-margin-bs text-accent">We are open and trustworthy.</p>
+										<p class="text-white l-margin-bs text-accent">We are transparent with the consumer on product ingredients and sources of origin.</p>
+									</div>
+									<div class="flip__content">
+										<span class="flip__icon"></span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -100,12 +104,16 @@ get_header(); ?>
 									<span class="flip__icon"></span>
 								</div>
 
-								<div class="flip__back text-center">
-									<p class="text-white text-accent l-margin-bs">We treat everyone with dignity.</p>
-									<p class="text-white text-accent l-margin-bs">We listen and learn from each other.</p>
-									<p class="text-white text-accent l-margin-bs">We value our customers and partners.</p>
-									<p class="text-white text-accent l-margin-bs">We practice humility.</p>
-									<span class="flip__icon"></span>
+								<div class="flip__back text-center" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/story-card-2.jpg);">
+									<div class="flip__content">
+										<p class="text-white l-margin-bs text-accent">We treat everyone with dignity.</p>
+										<p class="text-white l-margin-bs text-accent">We listen and learn from<br>each other.</p>
+										<p class="text-white l-margin-bs text-accent">We value our customers<br>and partners.</p>
+										<p class="text-white l-margin-bs text-accent">We practice humility.</p>
+									</div>
+									<div class="flip__content">
+										<span class="flip__icon"></span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -116,12 +124,16 @@ get_header(); ?>
 									<span class="flip__icon"></span>
 								</div>
 
-								<div class="flip__back text-center">
-									<p class="text-accent text-white l-margin-bs">We encourage the entrepreneurial spirit.</p>
-									<p class="text-accent text-white l-margin-bs">We continuously look for ways to “do it better”.</p>
-									<p class="text-accent text-white l-margin-bs">We are committed to finding new ways to delight our customers.</p>
-									<p class="text-accent text-white l-margin-bs">We embrace and drive change.</p>
-									<span class="flip__icon"></span>
+								<div class="flip__back text-center" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/story-card-3.jpg);">
+									<div class="flip__content">
+										<p class="text-white l-margin-bs text-accent">We encourage the<br>entrepreneurial spirit.</p>
+										<p class="text-white l-margin-bs text-accent">We continuously look for ways<br>to “do it better”.</p>
+										<p class="text-white l-margin-bs text-accent">We are committed to finding<br>new ways to delight our customers.</p>
+										<p class="text-white l-margin-bs text-accent">We embrace and drive change.</p>
+									</div>
+									<div class="flip__content">
+										<span class="flip__icon"></span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -132,11 +144,15 @@ get_header(); ?>
 									<span class="flip__icon"></span>
 								</div>
 
-								<div class="flip__back text-center">
-									<p class="text-white text-accent l-margin-bs">We value our people.</p>
-									<p class="text-white text-accent l-margin-bs">We believe in the development of our people and invest in their growth.</p>
-									<p class="text-white text-accent l-margin-bs">We believe diversity leads to improved team results.</p>
-									<span class="flip__icon"></span>
+								<div class="flip__back text-center" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/story-card-4.jpg);">
+									<div class="flip__content">
+										<p class="text-white l-margin-bs text-accent">We value our people.</p>
+										<p class="text-white l-margin-bs text-accent">We believe in the development<br>of our people and<br>invest in their growth.</p>
+										<p class="text-white l-margin-bs text-accent">We believe diversity leads to improved team results.</p>
+									</div>
+									<div class="flip__content">
+										<span class="flip__icon"></span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -147,13 +163,17 @@ get_header(); ?>
 									<span class="flip__icon"></span>
 								</div>
 
-								<div class="flip__back text-center">
-									<p class="text-accent text-white l-margin-bs">We take ownership of our actions and are committed to deliver results.</p>
-									<p class="text-accent text-white l-margin-bs">We use data to make fact-based decisions.</p>
-									<p class="text-accent text-white l-margin-bs">We contribute and engage each other to share ideas.</p>
-									<p class="text-accent text-white l-margin-bs">Everyone has a voice.</p>
-									<p class="text-accent text-white l-margin-bs">We believe in open and effective communication.</p>
-									<span class="flip__icon"></span>
+								<div class="flip__back text-center" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/story-card-5.jpg);">
+									<div class="flip__content">
+										<p class="text-white l-margin-bs">We take ownership of our actions and are committed to deliver results.</p>
+										<p class="text-white l-margin-bs">We use data to make<br>fact-based decisions.</p>
+										<p class="text-white l-margin-bs">We contribute and engage each<br>fother to share ideas.</p>
+										<p class="text-white l-margin-bs">Everyone has a voice.</p>
+										<p class="text-white l-margin-bs">We believe in open and<br>feffective communication.</p>
+									</div>
+									<div class="flip__content">
+										<span class="flip__icon"></span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -164,10 +184,14 @@ get_header(); ?>
 									<span class="flip__icon"></span>
 								</div>
 
-								<div class="flip__back text-center">
-									<p class="text-white text-accent l-margin-bs">We strive and exceed expectations.</p>
-									<p class="text-white text-accent l-margin-bs">We are committed to providng the very best quality and service.</p>
-									<span class="flip__icon"></span>
+								<div class="flip__back text-center" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/story-card-6.jpg);">
+									<div class="flip__content">
+										<p class="text-white l-margin-bs text-accent">We strive and exceed expectations.</p>
+										<p class="text-white l-margin-bs text-accent">We are committed to<br>providng the very best quality<br>and service.</p>
+									</div>
+									<div class="flip__content">
+										<span class="flip__icon"></span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -175,14 +199,18 @@ get_header(); ?>
 							<div class="flip__card" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/story-card-7.jpg);">
 								<div class="flip__front">
 									<p class="flip__heading">Commitment to<br>the Customer</p>
-									<span class="flip__icon"></span>
+									<span class="flip__icon"></span>									
 								</div>
 
-								<div class="flip__back text-center">
-									<p class="text-accent text-white l-margin-bs">Fresh food is our world and we love what we do.</p>
-									<p class="text-accent text-white l-margin-bs">We are passionate about creating delicious ways to eat healthy.</p>
-									<p class="text-accent text-white l-margin-bs">We thrive on continuous learning to deliver superior results.</p>
-									<span class="flip__icon"></span>
+								<div class="flip__back text-center" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/story-card-7.jpg);">
+									<div class="flip__content">
+										<p class="text-white l-margin-bs text-accent">Fresh food is our world and we love what we do.</p>
+										<p class="text-white l-margin-bs text-accent">We are passionate about creating delicious ways to eat healthy.</p>
+										<p class="text-white l-margin-bs text-accent">We thrive on continuous learning to deliver superior results.</p>
+									</div>
+									<div class="flip__content">
+										<span class="flip__icon"></span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -193,9 +221,13 @@ get_header(); ?>
 									<span class="flip__icon"></span>
 								</div>
 
-								<div class="flip__back text-center">
-									<p class="text-white text-accent l-margin-bs">We are committed to protecting and enhancing our planet for future generations through environmental and social responsibility programs.</p>
-									<span class="flip__icon"></span>
+								<div class="flip__back text-center" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/story-card-8.jpg);">
+									<div class="flip__content">
+										<p class="text-white l-margin-bs text-accent">We are committed to protecting and enhancing our planet for future generations through environmental and social responsibility programs.</p>
+									</div>
+									<div class="flip__content">
+										<span class="flip__icon"></span>
+									</div>
 								</div>
 							</div>
 						</div>

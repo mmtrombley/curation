@@ -46,7 +46,7 @@
 	</div>
 
 	<div id="home-3" class="callout callout--home-split">
-		<div class="l-constrained--desktop-wide text-center">
+		<div class="l-constrained--desktop-wide text-center bgwrap__container">
 			<div class="l-constrained">
 				<div class="l-split l-padding-tx l-padding-bm border--right border-accent">				
 					<h4 class="subheading">Growing Connections</h4>
@@ -59,12 +59,13 @@
 					<p><a href="/brand-portfolio" class="btn btn--outline">Our Brands</a></p>
 				</div>
 			</div>
-		</div>
-		<div class="l-constrained--desktop-wide">
-			&nbsp;
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/home-3-left.jpg" class="img__pull-left" width="408" height="672">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/home-3-center.jpg" class="img__pull-center" width="362" height="144">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/home-3-right.png" class="img__pull-right" width="450" height="405">
+
+			<div class="l-constrained--desktop-wide bgwrap__wrap">
+				&nbsp;
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/home-3-left.jpg" class="img__pull-left" width="408" height="672">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/home-3-center.jpg" class="img__pull-center" width="362" height="144">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/home-3-right.png" class="img__pull-right" width="450" height="405">
+			</div>
 		</div>
 	</div>
 
