@@ -33,8 +33,8 @@
 							<div class="card__pre"></div>
 							<h3 class="card__heading l-margin-bn">Clean. Fresh. Real.</h3>
 							<img class="" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="248" height="10" alt="divider">
-							<p class="l-margin-td">Curation Foods reimagines<br>the way fresh, healthy food is grown,<br>prepared, and delivered.</p>
-							<p>Our mission is to bring sustainable,<br>delicious, nutritious food choices to<br>every body, every day.</p>
+							<p class="l-margin-td">We reimagine the way fresh,<br>healthy food is grown, prepared and delivered.</p>
+							<p>Our mission is to increase access<br>to convenient, delicious and nutritious<br>plant-based foods in a way that preserves and protects our planet for future generations.</p>
 							<h4 class="card__subheading"><em>Bring it to the table.</em></h4>
 						</div>
 						<div class="card__post"></div>

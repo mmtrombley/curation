@@ -234,6 +234,7 @@
     right: 100%;
     top: 50%;
     transform: translate(50%, -50%);
+    z-index: -1;
 }
 
 .img__pull-right {
@@ -497,12 +498,12 @@
     }
 
     p {
-        @include rem( 'font-size', 22px );
-        @include rem( 'line-height', 26px );
+        @include rem( 'font-size', 18px );
+        @include rem( 'line-height', 22px );
 
         &.text-accent {
-            @include rem( 'font-size', 24px );
-            @include rem( 'line-height', 30px );
+            @include rem( 'font-size', 18px );
+            @include rem( 'line-height', 22px );
         }
 
         &:last-child {
@@ -539,6 +540,7 @@
     transform: translateX(-50%);
     height: 100%;
     z-index: -1;
+    width: 1600px;
 }
 
 /* Timeline

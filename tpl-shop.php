@@ -38,7 +38,7 @@ get_header(); ?>
 				<div id="shop-brands" class="l-constrained--desktop-wide">
 					<div class="l-three">
 						&nbsp;
-						<img class="img__pull-left" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/shop-eat-smart.jpg">
+						<img class="img__pull-left" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/shop-eat-smart.jpg" width="350" height="360">
 					</div>
 					<div class="l-three border--right text-center l-padding-al">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/eat-smart-logo.jpg" height="99" width="135">
