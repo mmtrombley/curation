@@ -50,7 +50,7 @@ get_header(); ?>
 					</div>
 					<div class="l-three">
 					&nbsp;
-						<img class="img__pull-right" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/shop-ooo.jpg">
+						<img class="img__pull-right" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/shop-ooo.jpg" width="269" height="409">
 					</div>
 				</div>
 

@@ -26,8 +26,8 @@
 .header--sub {
     width: 100%;
     overflow: hidden;
-    max-width: $desktop-wide;
-    @include rem( 'padding', 8px 0 );
+    background-color: $tawny;
+    @include rem( 'height', 32px );
 
     .quick {
         margin: 0;
@@ -298,9 +298,8 @@
 }
 
 #sus-bottom {
-    .img__pull-left {
-        // top: 0%;
-        // transform: translateX(0%);
+    .img__pull-left { 
+        transform: translate(80%, -50%);
     }
 }
 

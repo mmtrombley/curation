@@ -28,14 +28,14 @@
 <div id="inner-wrap">
 <header class="header">
 
-	<!-- <div class="header--sub">
-		<div class="">
+	<div class="header--sub">
+	<!-- 	<div class="">
 			<ul class="quick">
 				<li class="quick__item"><a class="quick__link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/nav-eng.jpg" width="14" height="13" alt=""> English</a></li>
 				<li class="quick__item"><a class="quick__link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/nav-usd.jpg" width="14" height="13" alt=""> USD</a></li>
 			</ul>
-		</div>
-	</div> -->
+		</div> -->
+	</div>
 
 	<div id="top" class="l-constrained--desktop-wid">
 
