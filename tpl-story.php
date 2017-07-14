@@ -77,7 +77,7 @@ get_header(); ?>
 				<div id="core-values" class="story--values">
 					<h3 class="heading--section">Core Values</h3>
 
-					<div class="l-constrained--desktop-wide text-center flip__container">
+					<div class="text-center flip__container">
 						<div class="l-three">
 							<div class="flip__card" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/story-card-1.jpg);">
 								<div class="flip__front">
@@ -264,8 +264,8 @@ get_header(); ?>
 								</div>
 								<div class="timeline__content">
 									<p class="timeline__date">1999</p>
-									<h4 class="timeline__title">Aqio Aquisition</h4>
-									<p class="timeline__desc">Landec Corporation (NASDAQ: LNDC) acquires Apio. As the inventor of BreatheWay technology, Landec brings a differentiated solution to Eat Smart by extending the shelf life of its products and delivering unsurpassed quality produce. </p>
+									<h4 class="timeline__title">Apio Aquisition</h4>
+									<p class="timeline__desc">Landec Corporation (NASDAQ: LNDC) acquires Apio. As the inventor of BreatheWay technology, Landec brings a differentiated solution to Eat Smart by extending the shelf life of its products and delivering unsurpassed quality produce.</p>
 								</div>
 								<div class="timeline__content">
 									<p class="timeline__date">2002</p>
@@ -274,18 +274,18 @@ get_header(); ?>
 								</div>
 								<div class="timeline__content">
 									<p class="timeline__date">2004</p>
-									<h4 class="timeline__title">Breatheway Technology</h4>
-									<p class="timeline__desc">Apio completes its first licensing agreement of its BreatheWay packaging technology to Chiquita for the Chiquita-to-go banana program. </p>
+									<h4 class="timeline__title">BreatheWay Technology</h4>
+									<p class="timeline__desc">Apio completes the first licensing agreement of its BreatheWay packaging technology to Chiquita for the Chiquita-to-go banana program. </p>
 								</div>
 								<div class="timeline__content">
 									<p class="timeline__date">2011</p>
 									<h4 class="timeline__title">Windset Innovation</h4>
-									<p class="timeline__desc">Apio and Landec invest in a 20% ownership of Windset Farms, the  leading hydroponic greenhouse grower in North America in a five year partnership agreement.</p>
+									<p class="timeline__desc">Apio and Landec invest in a 20% ownership of Windset Farms, the  leading hydroponic greenhouse grower in North America in a five-year partnership agreement.</p>
 								</div>
 								<div class="timeline__content">
 									<p class="timeline__date">2012</p>
 									<h4 class="timeline__title">GreenLine Aquisition</h4>
-									<p class="timeline__desc">Apio broadens its packaged fresh vegetable offering to include a full line of green bean products and secures a national fresh food supply chain. Adding to its refrigerated processing center in California, Apio now has processing centers in Ohio, Pennsylvania and Florida; distribution centers in South Carolina and New York and a full fleet of refrigerated trucks to ensure excellent customer delivery and service throughout North America.</p>
+									<p class="timeline__desc">Apio broadens its packaged fresh vegetable offering to include a full line of green bean products and secures a national fresh food supply chain. Adding to its refrigerated processing center in California, Apio now has processing centers in Ohio, Pennsylvania and Florida; additionally, there are distribution centers in South Carolina and New York and a full fleet of refrigerated trucks to ensure excellent customer delivery and service throughout North America.</p>
 								</div>
 								<div class="timeline__content">
 									<p class="timeline__date">2012</p>
@@ -304,18 +304,18 @@ get_header(); ?>
 								</div>
 								<div class="timeline__content">
 									<p class="timeline__date">2017</p>
-									<h4 class="timeline__title">Landec Aquires O Olive Oil</h4>
+									<h4 class="timeline__title">Landec Acquires O Olive Oil</h4>
 									<p class="timeline__desc">O Olive Oil is a premium producer of California specialty olive oils and wine vinegars with 100% clean and fully traceable ingredients.</p>
 								</div>
 								<div class="timeline__content">
 									<p class="timeline__date">2017</p>
 									<h4 class="timeline__title">Innovative Salad Packaging</h4>
-									<p class="timeline__desc">Eat Smart enters the single-serve salad segment with Salad Shake Ups,™ featuring 100% clean ingredients, unique flavor profiles, plant proteins and a patented bowl design that makes it easy to eat with no mess.</p>
+									<p class="timeline__desc">Eat Smart enters the single-serve salad segment with Salad Shake Ups&trade;, featuring 100% clean ingredients, unique flavor profiles, plant proteins and a patented bowl design that makes it easy to eat with no mess.</p>
 								</div>
 								<div class="timeline__content">
 									<p class="timeline__date">2018</p>
 									<h4 class="timeline__title">Eat Smart at Home</h4>
-									<p class="timeline__desc">Eat Smart launches an online store that makes it easy for consumers to have access to fresh vegetables delivered straight to their home. Initially serves selected zip codes on the West Coast.</p>
+									<p class="timeline__desc">Eat Smart launches an online store that makes it easy for consumers to have access to fresh vegetables delivered straight to their home. Initially serving selected zip codes on the West Coast.</p>
 								</div>
 								<div class="timeline__content">
 									<p class="timeline__date">2018</p>
@@ -325,7 +325,7 @@ get_header(); ?>
 								<div class="timeline__content">
 									<p class="timeline__date">2018</p>
 									<h4 class="timeline__title">Landec Launches Curation Foods</h4>
-									<p class="timeline__desc">Landec launches Curation Foods, combining its packaged vegetable products, premium olive oils, specialty vinegars, dressings and future all-natural products under a single Public Benefit Corporation dedicated to innovating plant-based products with 100% clean ingredients. The Eat Smart and O Olive Oil brands are now a part of Curation Foods and Apio is discontinued as a legal entity.</p>
+									<p class="timeline__desc">Landec launches Curation Foods, combining its packaged vegetable products, premium olive oils, specialty vinegars, dressings, and future all-natural products under a single Public Benefit Corporation dedicated to innovating plant-based products with 100% clean ingredients. The Eat Smart and O Olive Oil brands are now a part of Curation Foods and Apio is discontinued as a legal entity.</p>
 								</div>
 
 						</div>

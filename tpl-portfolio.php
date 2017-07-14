@@ -30,7 +30,7 @@ get_header(); ?>
 
 				<div class="callout l-padding-vx">
 					<div class="l-constrained--desktop-wide l-padding-tm l-padding-hl text-center">
-						<h3 class="heading--script l-margin-vn text-tawny">Curation Foods cultivates a collection of innovative brands<br>that reimagine the way fresh, healthy food is grown, prepared, and delivered.</h3>
+						<h3 class="heading--script l-margin-vn text-tawny">Curation Foods is a collection of innovative brands<br>that reimagine the way fresh, healthy food is grown, prepared, and delivered.</h3>
 						<img class="l-margin-bd" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="460" height="19" alt="divider">
 					</div>
 				</div>

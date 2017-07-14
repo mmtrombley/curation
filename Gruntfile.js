@@ -16,7 +16,7 @@ module.exports = function ( grunt ) {
         config: {
             src: 'assets/src',
             dist: 'assets/dist',
-            devUrl: 'curation.dev:8888'
+            devUrl: 'curation.dev'
         },
 
         // Libsass

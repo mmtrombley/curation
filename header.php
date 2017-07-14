@@ -28,14 +28,14 @@
 <div id="inner-wrap">
 <header class="header">
 
-	<div class="header--sub">
+	<!-- <div class="header--sub">
 		<div class="">
 			<ul class="quick">
 				<li class="quick__item"><a class="quick__link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/nav-eng.jpg" width="14" height="13" alt=""> English</a></li>
 				<li class="quick__item"><a class="quick__link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/nav-usd.jpg" width="14" height="13" alt=""> USD</a></li>
 			</ul>
 		</div>
-	</div>
+	</div> -->
 
 	<div id="top" class="l-constrained--desktop-wid">
 
@@ -62,18 +62,18 @@
 					</ul> -->
 
 					<ul class="main"> <!-- Desktop menu -->
-						<li class="main__item"><a class="main__link" href="/our-story">Our Story<img class="" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="474" height="17" alt="divider"></a></a></li>
-						<li class="main__item"><a class="main__link" href="/philosophy">Philosophy<img class="" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="474" height="17" alt="divider"></a></a></li>
-						<li class="main__item"><a class="main__link" href="/sustainability">Sustainability<img class="" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="474" height="17" alt="divider"></a></a></li>
+						<li class="main__item"><a class="main__link" href="/our-story">Our Story</a></li>
+						<li class="main__item"><a class="main__link" href="/philosophy">Philosophy</a></li>
+						<li class="main__item"><a class="main__link" href="/sustainability">Sustainability</a></li>
 						<li class="main__item--logo">
 							<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 								<img class="logo__image" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/logo.png" width="184" height="65" alt="<?php echo esc_attr( bloginfo( 'name' ) ); ?>">
 							</a>
 						</li>
-						<li class="main__item"><a class="main__link" href="/giving-back">Giving Back<img class="" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="474" height="17" alt="divider"></a></a></li>
-						<li class="main__item"><a class="main__link" href="/brand-portfolio">Brand Portfolio<img class="" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="474" height="17" alt="divider"></a></a></li>
-						<li class="main__item"><a class="main__link" href="/shop">Shop<img class="" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="474" height="17" alt="divider"></a></a></li>
-						<li class="main__item"><a class="main__link" href="#"><i class="icon-search"></i></a></a></li>
+						<li class="main__item"><a class="main__link" href="/giving-back">Giving Back</a></li>
+						<li class="main__item"><a class="main__link" href="/brand-portfolio">Brand Portfolio</a></li>
+						<li class="main__item"><a class="main__link" href="/shop">Shop</a></li>
+						<li class="main__item"><a class="main__link main__link--search" href="#"><i class="icon-search"></i></a></a></li>
 					</ul>
 				</nav>
 
