@@ -19,49 +19,80 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php // get_template_part( 'template-parts/content', 'page' ); ?>
+				<!-- Hero -->
+				<?php
+					$args = array(
+						'image_id' => get_field('card_background_image'),
+						'size'	   => 'full',
+						'path'     => true
+					);
+					
+					$bg_image    = _s_get_image( $args );
+					$headline    = get_field('hero_headline') ? get_field('hero_headline') : get_the_title();
+					$hero_card   = get_field('hero_card_content') ? get_field('hero_card_content') : '';
+					$hero_class  = get_field('hero_card_content') ? ' hero--card ' : '';
+				?>
+				<div class="hero <?php echo $hero_class; ?> text-center" style="background-image:url(<?php echo $bg_image; ?>);">
+				
+					<div class="l-constrained--desktop-wide">
+						<h1 class="entry-title"><?php echo $headline; ?></h1>
 
-				<!-- Hero --> 
-				<div class="hero text-center" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/brands-hero.jpg);">
-
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
+						<?php if( get_field('hero_card_content') ) : ?>
+							<div class="l-constrained">
+								<div class="l-three">&nbsp;</div>
+								<div class="l-six l-padding-hd">
+									<div class="card card--hero">
+										<?php echo $hero_card; ?>
+									</div>
+								</div>
+								<div class="l-three">&nbsp;</div>
+							</div>
+						<?php endif; ?>
+					</div>
 				</div><!-- .entry-header -->
 
-				<div class="callout l-padding-vx">
-					<div class="l-constrained--desktop-wide l-padding-tm l-padding-hl text-center">
-						<h3 class="heading--script l-margin-vn text-tawny">Curation Foods is a collection of innovative brands<br>that reimagine the way fresh, healthy food is grown, prepared, and delivered.</h3>
-						<img class="l-margin-bd" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="460" height="19" alt="divider">
-					</div>
-				</div>
-
-				<div class="l-constrained--desktop-wide flex__wrap">
-					<div class="l-split l-padding-hn">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/brand-1.jpg" width="960" height="570">
-					</div>
-					<div class="l-split l-padding-hn flex__box">
-						<div class="l-padding-vx l-padding-hl flex__box--center">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/eat-smart-logo.jpg">
-							<h4 class="subheading text-accent">Innovation for Smarter Eating</h4>
-							<p class="text-accent">Eat Smart is all about using innovative technology to provide healthy, convenient fresh vegetable for everyday meals.</p>
-							<p><a href="https://eatsmart.net/" title="Eat Smart" target="_blank" class="btn btn--outline">Learn more</a></p>
+				<?php if( get_the_content ) : ?>
+					<div class="callout l-padding-vx">
+						<div class="l-constrained--desktop-wide l-padding-tm l-padding-hl text-center">
+							<?php the_content(); ?>
 						</div>
 					</div>
-				</div>
+				<?php endif; ?>
 
-				<div class="l-constrained--desktop-wide flex__wrap">
-					<div class="l-split l-padding-hn flex__box">
-						<div class="l-padding-vx l-padding-hl flex__box--center">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/o-olive-oil-logo.jpg">
-							<h4 class="subheading text-accent">Crushed to Perfection</h4>
-							<p class="text-accent">O Olive Oil &amp; Vinegar is the premier producer of California specialty olive oils and wine vinegars.</p>
-							<p><a href="/o-olive-oil/" title="O Olive Oil" class="btn btn--outline">Learn more</a></p>
+				
+				<?php if( have_rows('brands') ) : $i = 0; ?>
+
+					<?php while( have_rows('brands') ) : the_row(); $i++;
+						$args = array(
+							'image_id' => get_sub_field('image'),
+							'size'     => array( 960, 570 )
+						);
+						$image   = get_sub_field('image') ? _s_get_image( $args ) : '';
+						$content = get_sub_field('content'); ?>
+
+						<div class="l-constrained--desktop-wide flex__wrap">
+							<?php if( $i == 1 ) : ?>
+								<div class="l-split l-padding-hn">
+									<img src="<?php echo $image[0]; ?>" width="960" height="570">
+								</div>
+							<?php endif; ?>
+							
+							<div class="l-split l-padding-hn flex__box">
+								<div class="l-padding-vx l-padding-hl flex__box--center">
+									<?php echo $content; ?>
+								</div>
+							</div>
+
+							<?php if( $i == 2 ) : ?>
+								<div class="l-split l-padding-hn">
+									<img src="<?php echo $image[0]; ?>" width="960" height="570">
+								</div>
+							<?php endif; ?>
 						</div>
-					</div>
-					<div class="l-split l-padding-hn">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/brand-2.jpg" width="960" height="570">
-					</div>
-				</div>
+
+					<?php endwhile; ?>
+
+				<?php endif; ?>
 
 			<?php endwhile; // End of the loop. ?>
 

@@ -120,6 +120,7 @@ dd {
 }
 
 .heading--script {
+    margin-top: 0;
     font-family: $font-script;
     @include rem( 'font-size', 72px );
 }

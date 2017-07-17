@@ -6,6 +6,7 @@
         var EV = {
             init : function() {
                 this.utils.init();
+                this.flip();
             },
             vals : {
                 $window : $(window) // http://jsperf.com/jquery-window-cache
@@ -89,6 +90,16 @@
                     });
                 }
             },
+
+            flip : function() {
+                // $(".flip__card").click(function() {
+                //     $( this ).toggleClass("flipped");
+                // });
+
+                $(".flip__container > .l-three").click(function() {
+                    $( this ).children(".flip__card").toggleClass("flipped");
+                });
+            }
         };
 
         EV.init();

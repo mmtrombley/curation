@@ -19,62 +19,114 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php // get_template_part( 'template-parts/content', 'page' ); ?>
+				<!-- Hero -->
+				<?php
+					$args = array(
+						'image_id' => get_field('card_background_image'),
+						'size'	   => 'full',
+						'path'     => true
+					);
+					
+					$bg_image    = _s_get_image( $args );
+					$headline    = get_field('hero_headline') ? get_field('hero_headline') : get_the_title();
+					$hero_card   = get_field('hero_card_content') ? get_field('hero_card_content') : '';
+					$hero_class  = get_field('hero_card_content') ? ' hero--card ' : '';
+				?>
+				<div class="hero <?php echo $hero_class; ?> text-center" style="background-image:url(<?php echo $bg_image; ?>);">
+				
+					<div class="l-constrained--desktop-wide">
+						<h1 class="entry-title"><?php echo $headline; ?></h1>
 
-				<!-- Hero --> 
-				<div class="hero text-center" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/giving-back-hero.jpg);">
-
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
+						<?php if( get_field('hero_card_content') ) : ?>
+							<div class="l-constrained">
+								<div class="l-three">&nbsp;</div>
+								<div class="l-six l-padding-hd">
+									<div class="card card--hero">
+										<?php echo $hero_card; ?>
+									</div>
+								</div>
+								<div class="l-three">&nbsp;</div>
+							</div>
+						<?php endif; ?>
+					</div>
 				</div><!-- .entry-header -->
 
-				<div class="callout l-padding-vx">
-					<div class="l-constrained l-padding-tm l-padding-hl text-center">
-						<h3 class="heading--script l-margin-vn text-tawny">As part of our mission to give more people access to real food, we are focusing our resources to bring fresh produce to the food deserts of the U.S.</h3>
-						<img class="l-margin-bd" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="460" height="19" alt="divider">
-						<p class="text-accent">The food deserts are geographic areas where residents don’t have access to healthy food options, specifically fresh vegetables.</p>
-					</div>
-				</div>
-
-				<div class="story--values">
-
-					<div class="story l-padding-vx" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/giving-back-1.jpg);">
-						<div class="l-constrained l-padding-tm l-padding-bx">
-							<div class="l-split">
-								<div class="card text-center">
-									<div class="l-padding-hm">
-										<h2 class="card__heading h1">Delivering<br>Goodness</h2>
-										<img class="l-margin-bd" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="248" height="10" alt="divider">
-										<p class="text-light">We have access to an abundance of fresh vegetables in California—often more than can even be harvested and distributed.  </p>
-										<p class="text-light">We have the unique ability to use our trucks and fresh food supply chain—not only to deliver nationwide to our retail partners—but also directly to communities in need. </p>
-									</div>
-								</div>
-							</div>
-							<div class="l-split">&nbsp;</div>
+				<?php if( get_the_content() ) : ?>
+					<div class="callout l-padding-vx">
+						<div class="l-constrained l-padding-tm l-padding-hl text-center">
+							<?php the_content(); ?>
 						</div>
 					</div>
-					<div class="story l-padding-vx" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/giving-back-2.jpg);">
-						<div class="l-constrained l-padding-tm l-padding-bx">
-							<div class="l-split">&nbsp;</div>
-							<div class="l-split">
-								<div class="card text-center">
-									<div class="l-padding-hm">
-										<h2 class="card__heading h1">The Last Mile</h2>
-										<img class="l-margin-bd" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="248" height="10" alt="divider">
-										<p class="text-light">We are partnering with <strong>Feeding America</strong> to get fresh food to communities in need. Each year, they will drive the final mile to communities in the food deserts, delivering fresh food directly to 1 in 7 people.</p>
+				<?php endif; ?>
+
+				<?php if( have_rows('content_sections') ) : $i = 0; ?>
+
+					<div class="story--values">
+
+					<?php while( have_rows('content_sections') ) : the_row(); $i++; 
+						$args = array(
+							'image_id' => get_sub_field('background_image'),
+							'size'	   => 'full',
+							'path'     => true
+						);
+						$bg      = get_sub_field('background_image') ? _s_get_image( $args ) : '';
+						$content = get_sub_field('card_content') ? get_sub_field('card_content') : ''; ?>
+
+						<div class="story l-padding-vx" style="background-image:url(<?php echo $bg; ?>);">
+							<div class="l-constrained l-padding-tm l-padding-bx">
+								<?php if( $i == 2 ) : ?>
+									<div class="l-split">&nbsp;</div>
+									<div class="l-split">
+								<?php else : ?>
+									<div class="l-split">
+								<?php endif; ?>
+									<div class="card text-center">
+										<div class="l-padding-hm">
+											<?php echo $content; ?>
+										</div>
 									</div>
 								</div>
+								<?php if( $i != 2 ) : ?>
+									<div class="l-split">&nbsp;</div>
+								<?php endif; ?>
+							</div>
+						</div>
+					<?php endwhile; ?>
+					</div>
+				<?php endif; ?>
+
+
+				<?php
+				$args_left = array(
+					'image_id' => get_field('overflow_image_left'),
+					'size'	   => 'full'
+				);
+				$args_right = array(
+					'image_id' => get_field('overflow_image_right'),
+					'size'	   => 'full'
+				);
+				$bg_left      = get_field('overflow_image_left') ? _s_get_image( $args_left ) : '';
+				$bg_right     = get_field('overflow_image_right') ? _s_get_image( $args_right ) : '';
+
+				$overflow_content = get_field('overflow_content');
+
+				if( $overflow_content ) : ?>
+					<div id="sus-bottom" class="callout l-padding-vx">
+						<div class="l-constrained--desktop-wide bgwrap__container">
+							<div class="l-constrained--site l-padding-tm l-padding-hl text-center">
+								<?php echo $overflow_content; ?>
+							</div>
+							<div class="l-constrained--desktop-wide bgwrap__wrap">
+								<?php if( $bg_left ) : ?>
+									<img src="<?php echo $bg_left[0]; ?>" class="img__pull-left" width=""<?php echo $bg_left[1]; ?>" height=""<?php echo $bg_left[2]; ?>">
+								<?php endif; ?>
+								<?php if( $bg_right ) : ?>
+									<img src="<?php echo $bg_right[0]; ?>" class="img__pull-right" width="<?php echo $bg_right[1]; ?>" height="<?php echo $bg_right[2]; ?>">
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="callout l-padding-vx">
-					<div class="l-constrained l-padding-tm l-padding-hl text-center">
-						<h3 class="heading--script l-margin-vn text-tawny">Food for Thought</h3>
-						<p class="text-accent">Learn more about food deserts, the communities we serve and how you can get involved.</p>
-					</div>
-				</div>
+				<?php endif; ?>
 
 			<?php endwhile; // End of the loop. ?>
 

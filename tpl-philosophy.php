@@ -14,73 +14,70 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php // get_template_part( 'template-parts/content', 'page' ); ?>
+			<!-- Hero -->
+			<?php
+				$args = array(
+					'image_id' => get_field('card_background_image'),
+					'size'	   => 'full',
+					'path'     => true
+				);
+				
+				$bg_image    = _s_get_image( $args );
+				$headline    = get_field('hero_headline') ? get_field('hero_headline') : get_the_title();
+				$hero_card   = get_field('hero_card_content') ? get_field('hero_card_content') : '';
+				$hero_class  = get_field('hero_card_content') ? ' hero--card ' : '';
+			?>
+			<div class="hero <?php echo $hero_class; ?> text-center" style="background-image:url(<?php echo $bg_image; ?>);">
+			
+				<div class="l-constrained--desktop-wide">
+					<h1 class="entry-title"><?php echo $headline; ?></h1>
 
-				<!-- Hero --> 
-				<div class="hero hero--card text-center" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/philosophy-hero.jpg);">
-
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-					<div class="l-constrained">
-						<div class="l-three">&nbsp;</div>
-						<div class="l-six l-padding-hd">
-							<div class="card card--hero">
-								<h2 class="card__heading h1 l-margin-bn">Everything we do at <br>Curation Foods has <br>an impact.  </h2>
-								<img class="l-margin-vd" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="248" height="10" alt="divider">
-								<p>On people who eat our food. On growers and grocers. On partners and investors. On the soil, the water and the air. In all our actions, we are guided by what it means to eat healthy and live healthy.</p>
+					<?php if( get_field('hero_card_content') ) : ?>
+						<div class="l-constrained">
+							<div class="l-three">&nbsp;</div>
+							<div class="l-six l-padding-hd">
+								<div class="card card--hero">
+									<?php echo $hero_card; ?>
+								</div>
 							</div>
+							<div class="l-three">&nbsp;</div>
 						</div>
-						<div class="l-three">&nbsp;</div>
-					</div>
-				</div><!-- .entry-header -->
+					<?php endif; ?>
+				</div>
+			</div><!-- .entry-header -->
 
+			<?php if( have_rows('content_blocks') ) : ?>
 				<div class="callout l-padding-vx text-center">
 					<h3 class="heading--script l-margin-vn text-tawny">We Believe</h3>
 					<div class="l-constrained grid grid--equal">
-						<div class="l-third grid__item border--bottom border--right">
-							<p><img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/believe-icon-1.jpg" alt=""></p>
-							<p class="text-light text-accent">Access to real food is a <br>basic human right.</p>
-							<p><a href="#" class="btn btn--outline">learn more</a></p>
-						</div>
-						<div class="l-third grid__item border--bottom border--right">
-							<p><img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/believe-icon-2.jpg" alt=""></p>
-							<p class="text-light text-accent">Good food promotes<br>good health.</p>
-							<p><a href="#" class="btn btn--outline">learn more</a></p>
-						</div>
-						<div class="l-third grid__item border--bottom">
-							<p><img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/believe-icon-3.jpg" alt=""></p>
-							<p class="text-light text-accent">Clean, fresh, real food can be the most delicious option.</p>
-							<p><a href="#" class="btn btn--outline">learn more</a></p>
-						</div>
-					</div>
+						<?php while( have_rows('content_blocks') ) : the_row();
+							$args = array(
+								'image_id' => get_sub_field('icon'),
+								'size'	   => 'full'
+							);
+							$icon      = get_sub_field('icon') ? _s_get_image( $args ) : '';
 
-					<div class="l-constrained grid grid--equal">
-						<div class="l-third grid__item border--right">
-							<p><img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/believe-icon-4.jpg" alt=""></p>
-							<p class="text-light text-accent">Knowing where our food <br>comes from starts with knowing our growers.</p>
-							<p><a href="#" class="btn btn--outline">learn more</a></p>
-						</div>
-						<div class="l-third grid__item border--right">
-							<p><img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/believe-icon-5.jpg" alt=""></p>
-							<p class="text-light text-accent">Bringing healthy food <br>to the table should be easy. </p>
-							<p><a href="#" class="btn btn--outline">learn more</a></p>
-						</div>
-						<div class="l-third grid__item">
-							<p><img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/believe-icon-6.jpg" alt=""></p>
-							<p class="text-light text-accent">Healthy people and <br>a healthy planet <br>go hand in hand.</p>
-							<p><a href="#" class="btn btn--outline">learn more</a></p>
-						</div>
+							$text       = get_sub_field('text') ? '<p class="text-light text-accent">' . get_sub_field('text') . '</p>' : '';
+							$button_url = get_sub_field('button_url') ? '<p><a href="' . get_sub_field('button_url') . '" class="btn btn--outline">Learn More</a></p>' : '';
+						?>
+							<div class="l-third grid__item border--bottom border--right">
+								<p><img src="<?php echo $icon[0]; ?>" width="<?php echo $icon[1]; ?>" height="<?php echo $icon[2]; ?>" alt=""></p>
+								<?php echo $text; ?>
+								<?php echo $button_url; ?>
+							</div>
+						<?php endwhile; ?>
 					</div>
 				</div>
+			<?php endif; ?>
 
-			<?php endwhile; // End of the loop. ?>
+		<?php endwhile; // End of the loop. ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php get_footer(); ?>

@@ -348,6 +348,16 @@ function _s__mce_before_init( $settings ) {
             'classes'  => 'subheading'
         ),
         array(
+            'title'    => 'Heading: Script',
+            'selector' => 'h1,h2,h3,h4,h5,h6',
+            'classes'  => 'heading--script text-tawny'
+        ),
+        array(
+            'title'    => 'Callout Text',
+            'selector' => 'p',
+            'classes'  => 'text-accent'
+        ),
+        array(
            'title'    => 'Button: Black',
            'selector' => 'a',
            'classes'  => 'btn'
@@ -355,12 +365,12 @@ function _s__mce_before_init( $settings ) {
         array(
            'title'    => 'Button: Primary',
            'selector' => 'a',
-           'classes'  => 'btn primary'
+           'classes'  => 'btn btn--primary btn--oval'
         ),
         array(
            'title'    => 'Button: Secondary',
            'selector' => 'a',
-           'classes'  => 'btn secondary'
+           'classes'  => 'btn btn--secondary'
         ),
         array(
            'title'    => 'Button: Small',
@@ -372,17 +382,11 @@ function _s__mce_before_init( $settings ) {
            'selector' => 'a',
            'classes'  => 'large'
         ),
-        // Primary Text Colors
-        // array(
-        //    'title'   => 'Text: Green',
-        //    'inline'  => 'span',
-        //    'classes' => 'text-conifer'
-        // ),
-        // array(
-        //    'title'   => 'Text: Gray',
-        //    'inline'  => 'span',
-        //    'classes' => 'text-corduroy'
-        // ),
+        array(
+           'title'    => 'Button: Outlined',
+           'selector' => 'a',
+           'classes'  => 'btn btn--outline'
+        ),
         array(
            'title'   => 'Text: Fine Print',
            'inline'  => 'span',

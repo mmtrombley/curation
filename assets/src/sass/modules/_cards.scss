@@ -32,6 +32,15 @@
     	@include rem( 'font-size', 20px );
     }
 
+    h3 {
+		color: $tawny;
+		@include rem( 'font-size', 36px );
+		@include rem( 'margin-top', 16px );
+	}
+
+    h4,
+    h5,
+    h6,
     .card__subheading {
     	// font-family: $font-script;
     	@include rem( 'font-size', 30px );	
@@ -70,7 +79,12 @@
 	    left: 0;
 	}
 
+	h1,
+	h2,
+	h3,
 	.card__heading {
+		color: $tawny;
+		margin-bottom: 0;
 		font-family: $font-script;
 		@include rem( 'font-size', 60px );	
 	}
@@ -109,6 +123,12 @@
 	position: relative;
 	top: 50px;
 	box-shadow: 0 0 33px rgba(0, 0, 0, 0.2);
+
+	h2 {
+		color: $tawny;
+		@include rem( 'font-size', 36px );
+		@include rem( 'margin-top', 16px );
+	}
 	
 	p {
 		padding: 0 56px;

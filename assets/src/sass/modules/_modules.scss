@@ -145,7 +145,7 @@
     }
 
     .page-template-tpl-story & {
-        padding-top: 0;
+        padding-top: 116px;
     }
 
     .page-template-tpl-product-ooo & {
@@ -268,6 +268,38 @@
 
 /* Home
    ========================================================================== */
+
+#home-3 {
+    h2,
+    h3,
+    h4 {
+        font-family: $font-bold;
+        text-transform: uppercase;
+    }
+
+    p {
+        @include rem( 'font-size', 24px );
+        @include rem( 'padding', 0 32px );
+    }
+}
+
+#home-4 {
+    h2,
+    h3,
+    h4 {
+        margin: 0;
+        color: white;
+        font-family: $font-script;
+        @include rem( 'font-size', 72px );
+    }
+
+    p {
+        color: white;
+        @include rem( 'margin-top', 16px );
+        @include rem( 'font-size', 24px );
+    }
+}
+
 #home-3,
 #public-benefit-corp,
 #sus-bottom,
@@ -294,6 +326,25 @@
 #public-benefit-corp {
     .img__pull-left {
         top: 75%;
+    }
+
+    h3 {
+        margin: 0;
+        color: $tawny;
+        font-family: $font-script;
+        @include rem( 'font-size', 72px );
+    }
+
+    h4 {
+        margin: 0;
+        color: $gray;
+        font-family: $font-family;
+        text-transform: uppercase;
+        @include rem( 'font-size', 24px );
+    }
+
+    p {
+        @include rem( 'font-size', 24px );
     }
 }
 
@@ -427,8 +478,12 @@
     -webkit-perspective: 1000;
     -webkit-backface-visibility: hidden;
 
-    /* flip the pane when hovered */
+    /* flip the pane when clicked */
     &:hover {
+        cursor: pointer;
+    }
+
+    &.flipped {
         transform: rotateY(180deg);
 
         .flip__front {
@@ -502,6 +557,7 @@
 
     // initially hidden
     transform: rotateY(180deg);
+    z-index: 10;
 
     &:before {
         content: '';
@@ -518,13 +574,10 @@
     }
 
     p {
+        color: white;
         @include rem( 'font-size', 18px );
         @include rem( 'line-height', 22px );
-
-        &.text-accent {
-            @include rem( 'font-size', 18px );
-            @include rem( 'line-height', 22px );
-        }
+        @include rem( 'margin-bottom', 8px );
 
         &:last-child {
             margin-bottom: 0;
@@ -595,6 +648,7 @@
             
             &:before {
                 content:'';
+                z-index: 5;
                 display: block;
                 width: 14px;
                 height: 14px;
@@ -608,6 +662,7 @@
 
             &:after {
                 content:'';
+                z-index: 5;
                 display: block;
                 width: 31%;
                 height: 1px;
@@ -695,14 +750,19 @@
 /* Grid
    ========================================================================== */
 .grid {
-    display: flex;
+    .flexbox & {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .grid__item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
+    .flexbox & {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
     @include rem( 'padding', 32px 16px );
 
     > * {

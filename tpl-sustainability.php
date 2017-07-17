@@ -14,91 +14,114 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php // get_template_part( 'template-parts/content', 'page' ); ?>
+			<!-- Hero -->
+			<?php
+				$args = array(
+					'image_id' => get_field('card_background_image'),
+					'size'	   => 'full',
+					'path'     => true
+				);
+				
+				$bg_image    = _s_get_image( $args );
+				$headline    = get_field('hero_headline') ? get_field('hero_headline') : get_the_title();
+				$hero_card   = get_field('hero_card_content') ? get_field('hero_card_content') : '';
+				$hero_class  = get_field('hero_card_content') ? ' hero--card ' : '';
+			?>
+			<div class="hero <?php echo $hero_class; ?> text-center" style="background-image:url(<?php echo $bg_image; ?>);">
+			
+				<div class="l-constrained--desktop-wide">
+					<h1 class="entry-title"><?php echo $headline; ?></h1>
 
-				<!-- Hero --> 
-				<div class="hero text-center" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/sustainability-hero.jpg);">
-
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-				</div><!-- .entry-header -->
-
-				<div class="callout l-padding-vx">
-					<div class="l-constrained--site l-padding-tm l-padding-hl text-center">
-						<h3 class="heading--script l-margin-vn text-tawny">We believe that healthy people and a healthy planet go hand in hand.</h3>
-						<p class="text-accent">We work to optimize food and minimize waste in a way that preserves and protects our planet for future generations.</p>
-						<p class="subheading">View Our</p>
-						<p><a class="btn btn--primary btn--oval">Sustainability Handbook</a> <a class="btn btn--primary btn--oval">Sustainability Videos</a></p>
-					</div>
-				</div>
-
-				<div class="story--values">
-					<h3 class="heading--section">We Take Pride</h3>
-
-					<div class="story l-padding-vx" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/sustainability-1.jpg);">
-						<div class="l-constrained l-padding-tm l-padding-bx">
-							<div class="l-third">
-								<div class="card text-center">
-									<div class="l-padding-hm">
-										<h2 class="card__heading h1">Food<br>Responsibility</h2>
-										<img class="l-margin-bd" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="248" height="10" alt="divider">
-										<p class="text-light">Bringing wholesome, real food to the table takes imagination. Our brands provide clean, fresh, real delicious food in recyclable packaging.</p>
+					<?php if( get_field('hero_card_content') ) : ?>
+						<div class="l-constrained">
+							<div class="l-three">&nbsp;</div>
+							<div class="l-six l-padding-hd">
+								<div class="card card--hero">
+									<?php echo $hero_card; ?>
 								</div>
 							</div>
-							</div>
+							<div class="l-three">&nbsp;</div>
 						</div>
-					</div>
-					<div class="story l-padding-vx" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/sustainability-2.jpg);">
+					<?php endif; ?>
+				</div>
+			</div><!-- .entry-header -->
+
+			<div class="callout l-padding-vx">
+				<div class="l-constrained--site l-padding-tm l-padding-hl text-center">
+					<?php the_content(); ?>
+				</div>
+			</div>
+
+			<?php if( have_rows('content_sections') ) : $i = 0; ?>
+			<div class="story--values">
+				<h3 class="heading--section">We Take Pride</h3>
+
+				<?php while( have_rows('content_sections') ) : the_row(); $i++; 
+					$args = array(
+						'image_id' => get_sub_field('background_image'),
+						'size'	   => 'full',
+						'path'     => true
+					);
+					$bg      = get_sub_field('background_image') ? _s_get_image( $args ) : '';
+					$content = get_sub_field('card_content') ? get_sub_field('card_content') : ''; ?>
+
+					<div class="story l-padding-vx" style="background-image:url(<?php echo $bg; ?>);">
 						<div class="l-constrained l-padding-tm l-padding-bx">
-							<div class="l-split">&nbsp;</div>
-							<div class="l-split">
+							<?php if( $i == 2 ) : ?>
+								<div class="l-split">&nbsp;</div>
+								<div class="l-split">
+							<?php else : ?>
+								<div class="l-third">
+							<?php endif; ?>
 								<div class="card text-center">
 									<div class="l-padding-hm">
-										<h2 class="card__heading h1">Environmental Responsibility</h2>
-										<img class="l-margin-bd" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="248" height="10" alt="divider">
-										<p class="text-light">We are committed to preserving the planets natural resources. We are designing environmental practices that reduce our impact and promote the sustainability of our planet for future generations.</p>
+										<?php echo $content; ?>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="story l-padding-vx" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/dist/img/sustainability-3.jpg);">
-						<div class="l-constrained l-padding-tm l-padding-bx">
-							<div class="l-third">
-								<div class="card text-center">
-									<div class="l-padding-hm">
-										<h2 class="card__heading h1">Social<br>Responsibility</h2>
-										<img class="l-margin-bd" src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/divider-tawny.png" width="248" height="10" alt="divider">
-										<p class="text-light">Curation Foods is committed to be an innovation leader, with every step forward designed to expand access to clean, real food. Our outreach initiatives are designed to support community and employee well-being.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+				<?php endwhile; ?>
 				</div>
+			<?php endif; ?>
 
+			
+			<?php
+				$args_left = array(
+					'image_id' => get_field('overflow_image_left'),
+					'size'	   => 'full'
+				);
+				$args_right = array(
+					'image_id' => get_field('overflow_image_right'),
+					'size'	   => 'full'
+				);
+				$bg_left      = get_field('overflow_image_left') ? _s_get_image( $args_left ) : '';
+				$bg_right     = get_field('overflow_image_right') ? _s_get_image( $args_right ) : '';
+
+				$overflow_content = get_field('overflow_content');
+
+			if( $overflow_content ) : ?>
 				<div id="sus-bottom" class="callout l-padding-vx">
-					<div class="l-constrained--desktop-wide bgwrap__container bgwrap__container">
+					<div class="l-constrained--desktop-wide bgwrap__container">
 						<div class="l-constrained--site l-padding-tm l-padding-hl text-center">
-							<h3 class="heading--script l-margin-vn text-tawny">Our Work Has Just Begun</h3>
-							<p class="text-accent">We are always learning and trying to improve, because we know what we achieved yesterday is not good enough for tomorrow. So here is our promise to you:</p>
-							<p class="text-accent">To be stewards of this earth, dedicated to enriching people’s lives on every dimension—from the foods we source, harvest, and deliver, to the people with whom we work and the trust we share with you, our community of customers and neighbors whom we cherish.</p>
+							<?php echo $overflow_content; ?>
 						</div>
 						<div class="l-constrained--desktop-wide bgwrap__wrap">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/sustainability-bg-left.jpg" class="img__pull-left" width="253" height="617">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/sustainability-bg-right.jpg" class="img__pull-right" width="598" height="687">
+							<img src="<?php echo $bg_left[0]; ?>" class="img__pull-left" width=""<?php echo $bg_left[1]; ?>" height=""<?php echo $bg_left[2]; ?>">
+							<img src="<?php echo $bg_right[0]; ?>" class="img__pull-right" width="<?php echo $bg_right[1]; ?>" height="<?php echo $bg_right[2]; ?>">
 						</div>
 					</div>
 				</div>
+			<?php endif; ?>
 
-			<?php endwhile; // End of the loop. ?>
+		<?php endwhile; // End of the loop. ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php get_footer(); ?>
